@@ -1,37 +1,23 @@
-<div>
-    <div>
-        <form (ngSubmit)="procesar()">
-            <div>
-                <label for="">
-                    Nombre de la pelicula:
-                </label>
 
-                <input type="text" placeholder="" name="nombre" class="field" [(ngModel)]="pelicula.nombre">
-            </div>
-
-            <div>
-                <label for="">
-                    Genero:
-                </label>
-
-                <input type="text" placeholder="" name="genero" class="field"[(ngModel)]="pelicula.genero">
-            </div>
-
-            <div>
-                <label for="">
-                    Pais:
-                </label>
-
-                <input type="text" placeholder="" name="pais" class="field" [(ngModel)]="pelicula.pais">
-            </div>
-
-            <button class="btn btn-green">
-                Enviar
-            </button>
-        </form>
+    <form (ngSubmit)="procesar()">
+        
+        <p>Nombre de la pelicula:</p>
+        <input type="text" placeholder="" name="nombre" required class="field" [(ngModel)]="pelicula.nombre" > <br>
+                
+        <p>Genero:</p>
+        <input type="text" placeholder="" name="genero" required class="field"[(ngModel)]="pelicula.genero"> <br>
+       
+        <p>Pais:</p>
+        <input type="text" placeholder="" name="pais" required class="field" [(ngModel)]="pelicula.pais"> <br>
+        <br>
+        <p class="center-content">
+            <input type="submit" class="btn btn-green" value="Enviar Datos">
+        </p>
+        
+        
+    
+    </form>
             
-    </div>
-</div>
 
 
     

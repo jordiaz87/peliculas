@@ -1,22 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
-@Component({
-  selector: 'app-formulario',
-  templateUrl: './formulario.component.html',
-  styleUrls: ['./formulario.component.css']
-})
-export class FormularioComponent implements OnInit {
-  
-
-  pelicula = {
-    nombre: '',
-    genero: '',
-    pais: ''
-  }
-
-
-  procesar() {
-    document.body.innerHTML = `<html>
+<html>
     <head>
         <style>
             .field2 {
@@ -24,7 +6,7 @@ export class FormularioComponent implements OnInit {
                 width: 300px;
                 background-color: white;
                 padding: 20px;
-                color: black;
+                color: #999;
                 font-size: 0.8em;
                 border-radius: 3px;
             }
@@ -36,17 +18,10 @@ export class FormularioComponent implements OnInit {
     </body>
     </head>
     
-</html>`
+</html>
+
+
+<p>Nombre de la Pelicula Agregada: <strong>${this.pelicula.nombre}</strong> </p> 
+    <p>Genero: <strong>${this.pelicula.genero}</strong> </p>
+    <p>Pais: <strong>${this.pelicula.pais}</strong> </p>
     
-    
-  }
-
-  constructor() {}
-
-  ngOnInit(): void {
-    
-  }
-
- 
-  }
-
